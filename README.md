@@ -36,14 +36,14 @@ Circuitul este compus din următoarele module:
 ## Intrări și ieșiri
 
 ### Intrări:
-- `clk` – semnal de clock.  
-- `rst` – reset asincron.  
-- `en` – enable pentru validarea literei.  
-- `data_in[7:0]` – litera în cod ASCII (8 biți).  
+- clk – semnal de clock.  
+- rst – reset asincron.  
+- en – enable pentru validarea literei.  
+- data_in[7:0] – litera în cod ASCII (8 biți).  
 
 ### Ieșiri:
-- `pass_ok` – activ pentru un singur ciclu de clock dacă parola este introdusă corect.  
-- `check` – semnal activ când parola a fost detectată.  
+- pass_ok – activ pentru un singur ciclu de clock dacă parola este introdusă corect.  
+- check – semnal activ când parola a fost detectată.  
 
 ---
 
