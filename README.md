@@ -2,7 +2,7 @@
 Acest proiect implementează un circuit hardware care procesează litere primite în cod ASCII și realizează două funcții principale:
 
 1. **Separă vocalele de consoane** și le salvează în două memorii RAM distincte.  
-2. **Verifică introducerea unei parole** (o secvență de litere succesive) și activează semnalul `check` dacă parola este detectată.
+2. **Verifică introducerea unei parole** (o secvență de litere succesive) și activează semnalul check dacă parola este detectată.
 
 ---
 
@@ -16,20 +16,19 @@ Circuitul este compus din următoarele module:
 - **ram_consonants**: memorie RAM cu 64 de locații a câte 8 biți fiecare, folosită pentru consoane. Citirea este asincronă.  
 - **ram_vowels**: memorie RAM cu 64 de locații a câte 8 biți fiecare, folosită pentru vocale. Citirea este asincronă.  
 - **vowel_checker_struct**: circuit combinațional care verifică dacă litera introdusă este o vocală.  
-- **pass_check_fsm**: automat finit care verifică parola introdusă. Activează semnalul `pass_ok` pentru un singur ciclu de clock dacă parola este corectă.
+- **pass_check_fsm**: automat finit care verifică parola introdusă. Activează semnalul pass_ok pentru un singur ciclu de clock dacă parola este corectă.
 
 ---
 
 ## Cerințe speciale
 
-- Literele sunt procesate doar dacă semnalul **`en`** este activ.  
+- Literele sunt procesate doar dacă semnalul en este activ.  
 - **Parola** este formată din primele 5 litere din prenumele și numele vostru concatenate.  
   - Exemplu:  
-    - Pentru *Ion Vasilescu*: parola = `ionva`  
-    - Pentru *Madalin Vasilescu*: parola = `madal`  
+    - Pentru *Ion Vasilescu*: parola = ionva  
+    - Pentru *Madalin Vasilescu*: parola = madal  
 - **Dimensiuni pentru fire**: trebuie specificate acolo unde lipsesc (de exemplu, semnale pe 6 biți, 8 biți etc.).  
 - Semnalele de **clock** și **reset** trebuie adăugate, chiar dacă nu apar în desen.  
-- Descrierea este realizată **structural**, pentru a evidenția modulele hardware folosite.  
 
 ---
 
